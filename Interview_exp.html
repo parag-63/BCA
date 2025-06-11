@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Experiences - Bosscoder Academy</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+        }
+        .dark-glass {
+            background-color: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-banner {
+            background: linear-gradient(105deg, rgba(10,10,10,0.8), rgba(10,10,10,0.6)), url('https://placehold.co/1200x400/0a0a0a/3b82f6?text=.') no-repeat center center;
+            background-size: cover;
+        }
+        .modal-content {
+             max-height: 90vh;
+        }
+        .experience-card:hover {
+            border-color: rgba(59, 130, 246, 0.5); /* border-blue-500 */
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+        }
+        /* Dropdown transition */
+        .group:hover .group-hover\:block {
+            display: block;
+        }
+        .dropdown-menu {
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1f2937; }
+        ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Header Navigation -->
+    <header class="dark-glass sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-3xl font-bold text-white flex-shrink-0">Bosscoder<span class="text-blue-500">.</span></a>
+            
+            <!-- Right Side: Main Nav Links & Login -->
+            <div class="hidden md:flex items-center space-x-8">
+                <!-- Program Dropdown -->
+                <div class="relative group">
+                    <button class="flex items-center text-base text-gray-300 hover:text-blue-400 transition-colors">
+                        Program <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
+                    </button>
+                    <div class="absolute hidden group-hover:block dropdown-menu bg-[#1c1c1c] p-2 rounded-lg shadow-xl w-48 mt-2 border border-gray-700">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/10 hover:text-white rounded">Transformer</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/10 hover:text-white rounded">Evolve</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/10 hover:text-white rounded">Accelerator</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/10 hover:text-white rounded">Data Science</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/10 hover:text-white rounded">Data Analytics</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/10 hover:text-white rounded">Data Engineer</a>
+                    </div>
+                </div>
+
+                <!-- Resource Dropdown -->
+                <div class="relative group">
+                    <button class="flex items-center text-base text-gray-300 hover:text-blue-400 transition-colors">
+                        Resource <i class="fa-solid fa-chevron-down ml-2 text-xs"></i>
+                    </button>
+                    <div class="absolute hidden group-hover:block dropdown-menu bg-[#1c1c1c] p-2 rounded-lg shadow-xl w-48 mt-2 border border-gray-700">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-300 hover:bg-blue-500/10 hover:text-white rounded">Test Playground</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-blue-400 font-semibold hover:bg-blue-500/10 rounded">Interview Experience</a>
+                    </div>
+                </div>
+
+                <a href="#" class="text-base text-gray-300 hover:text-blue-400 transition-colors">Masterclass</a>
+                <a href="#" class="text-base text-gray-300 hover:text-blue-400 transition-colors">Careers</a>
+                <a href="#" class="text-base text-gray-300 hover:text-blue-400 transition-colors">Blogs</a>
+                <a href="#" class="text-base text-gray-300 hover:text-blue-400 transition-colors">Login</a>
+            </div>
+
+             <!-- Mobile menu button -->
+             <div class="md:hidden">
+                <button class="text-white">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+             </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 md:px-6 py-12">
+
+        <!-- Hero Banner Section -->
+        <section class="hero-banner mb-12 p-8 md:p-12 rounded-2xl flex flex-col items-center justify-center text-center">
+             <h1 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Unlock 3,400+ Interview Experiences</h1>
+             <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-300">Get insider access to interview questions, processes, and salary info by sharing your own experience. It's free and anonymous.</p>
+             <button id="addExperienceBtnHero" class="mt-8 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-10 rounded-lg shadow-lg transition-transform transform hover:scale-105 text-lg">
+                <i class="fa-solid fa-plus mr-2"></i> Share Your Experience
+             </button>
+        </section>
+
+
+        <!-- Search and Filter Bar -->
+        <section class="dark-glass p-4 rounded-xl shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="relative">
+                    <i class="fa-solid fa-building absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                    <input id="companySearch" type="search" placeholder="Company" class="w-full bg-gray-900 border border-gray-700 rounded-lg py-2 pl-9 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="relative">
+                     <i class="fa-solid fa-user-tie absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                    <input id="roleSearch" type="search" placeholder="Role" class="w-full bg-gray-900 border border-gray-700 rounded-lg py-2 pl-9 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div class="relative">
+                     <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
+                    <input id="keywordSearch" type="search" placeholder="Keyword (e.g., System Design)" class="w-full bg-gray-900 border border-gray-700 rounded-lg py-2 pl-9 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Feed -->
+        <section class="mt-8">
+             <div id="experience-feed" class="flex flex-col">
+                <!-- Header Row -->
+                <div class="hidden md:grid grid-cols-12 gap-4 px-4 py-2 text-xs font-bold text-gray-400 uppercase">
+                    <div class="col-span-6">Title</div>
+                    <div class="col-span-2 text-center">Verdict</div>
+                    <div class="col-span-2 text-center">Difficulty</div>
+                    <div class="col-span-2 text-center">Activity</div>
+                </div>
+             </div>
+             <p id="no-results" class="text-center text-gray-400 mt-10 hidden">No experiences found matching your criteria.</p>
+        </section>
+    </main>
+
+    <!-- MODALS -->
+    <!-- Contribution Wall Modal -->
+    <div id="contributionModal" class="fixed inset-0 bg-black bg-opacity-80 z-50 hidden flex items-center justify-center p-4" onclick="closeModal('contributionModal')">
+        <div class="modal-content bg-[#1c1c1c] w-full max-w-md rounded-xl shadow-2xl p-8 text-center" onclick="event.stopPropagation()">
+            <i class="fa-solid fa-lock text-4xl text-yellow-400 mb-4"></i>
+            <h2 class="text-2xl font-bold text-white mb-2">Unlock this Experience</h2>
+            <p class="text-gray-300 mb-6">To view this and all other interview experiences, please contribute your own first. It helps keep the community strong!</p>
+            <button id="contributeBtn" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg mb-2 transition-transform transform hover:scale-105">
+                Share My Experience
+            </button>
+            <button onclick="closeModal('contributionModal')" class="text-sm text-gray-500 hover:text-gray-300">Maybe Later</button>
+        </div>
+    </div>
+    
+    <!-- Add Experience Form Modal -->
+    <div id="addExperienceModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex items-center justify-center p-4" onclick="closeModal('addExperienceModal')">
+        <div class="modal-content bg-[#1c1c1c] w-full max-w-3xl rounded-xl shadow-2xl overflow-y-auto" onclick="event.stopPropagation()">
+             <div class="sticky top-0 bg-[#1c1c1c] p-6 border-b border-gray-700 flex justify-between items-center z-10">
+                 <h2 class="text-2xl font-bold text-white">Share Your Interview Experience</h2>
+                 <button onclick="closeModal('addExperienceModal')" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            <form id="experienceForm" class="p-8 space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="companyName" class="block text-sm font-medium text-gray-300 mb-1">Company Name *</label>
+                        <input type="text" id="companyName" required class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., Google">
+                    </div>
+                     <div>
+                        <label for="jobTitle" class="block text-sm font-medium text-gray-300 mb-1">Job Title *</label>
+                        <input type="text" id="jobTitle" required class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., Software Engineer">
+                    </div>
+                </div>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                         <label for="finalVerdict" class="block text-sm font-medium text-gray-300 mb-1">Final Verdict *</label>
+                         <select id="finalVerdict" required class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>Offered</option>
+                            <option>Rejected</option>
+                            <option>Awaiting Decision</option>
+                            <option>Offer Declined</option>
+                        </select>
+                    </div>
+                     <div>
+                         <label for="difficulty" class="block text-sm font-medium text-gray-300 mb-1">Interview Difficulty *</label>
+                         <select id="difficulty" required class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <option>Easy</option>
+                            <option selected>Medium</option>
+                            <option>Hard</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="experienceTitle" class="block text-sm font-medium text-gray-300 mb-1">Experience Title *</label>
+                    <input type="text" id="experienceTitle" required class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., My Experience Landing a PM Role at Meta">
+                </div>
+                <div>
+                    <label for="experienceSummary" class="block text-sm font-medium text-gray-300 mb-1">Detailed Experience *</label>
+                    <textarea id="experienceSummary" required rows="8" class="w-full bg-gray-900 border border-gray-700 rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Describe the application process, interview rounds, questions asked, and your advice for others..."></textarea>
+                </div>
+                <div class="flex items-start">
+                    <div class="flex items-center h-5">
+                      <input id="anonymous" name="anonymous" type="checkbox" checked class="focus:ring-blue-500 h-4 w-4 text-blue-600 border-gray-600 rounded">
+                    </div>
+                    <div class="ml-3 text-sm">
+                      <label for="anonymous" class="font-medium text-gray-300">Post Anonymously</label>
+                    </div>
+                </div>
+            </form>
+             <div class="sticky bottom-0 p-6 bg-[#1c1c1c] border-t border-gray-700">
+                 <button type="submit" form="experienceForm" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg">Submit & Unlock All Experiences</button>
+             </div>
+        </div>
+    </div>
+
+
+    <!-- Detail View Modal -->
+    <div id="detailModal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden flex items-center justify-center p-4" onclick="closeModal('detailModal')">
+        <div class="modal-content bg-[#1c1c1c] w-full max-w-4xl rounded-xl shadow-2xl overflow-y-auto" onclick="event.stopPropagation()">
+            <div class="sticky top-0 bg-[#1c1c1c] p-6 border-b border-gray-700 flex justify-between items-center">
+                 <h2 id="modalTitle" class="text-2xl font-bold text-white">Experience Details</h2>
+                 <button onclick="closeModal('detailModal')" class="text-gray-400 hover:text-white text-2xl">&times;</button>
+            </div>
+            <div id="modalBody" class="p-8 space-y-6 prose prose-invert prose-lg max-w-none">
+                <p>Loading details...</p>
+            </div>
+             <div class="sticky bottom-0 p-6 bg-[#1c1c1c] border-t border-gray-700">
+                 <button onclick="closeModal('detailModal')" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg">Close</button>
+             </div>
+        </div>
+    </div>
+
+    <script>
+        // --- DATA STORE & STATE ---
+        let userHasContributed = false; // This is the flag for the contribution wall
+        const experienceData = [
+            { company: 'Google', role: 'SDE-2', verdict: 'Offered', difficulty: 'Hard', title: 'Google L5 System Design Deep Dive', summary: 'Challenging system design round on designing a distributed cache. Coding rounds were LC Hard/Medium.', comments: 12, upvotes: 152 },
+            { company: 'Meta', role: 'Product Manager', verdict: 'Offered', difficulty: 'Medium', title: 'Meta PM interview - Product Sense is key', summary: '4 on-site interviews focusing on product sense, execution, and leadership. Be prepared for behavioral questions.', comments: 25, upvotes: 210 },
+            { company: 'Atlassian', role: 'Senior Software Engineer', verdict: 'Rejected', difficulty: 'Hard', title: 'Atlassian - Tough Values Round', summary: 'System design was to design a collaborative text editor. Failed in the final values round, it was tougher than expected.', comments: 45, upvotes: 98 },
+            { company: 'Amazon', role: 'SDE-1', verdict: 'Offered', difficulty: 'Medium', title: 'Amazon SDE-1 New Grad Offer!', summary: 'Lots of focus on Leadership Principles. Coding questions were based on trees and graphs. Bar raiser round was intense.', comments: 88, upvotes: 350 },
+            { company: 'Microsoft', role: 'Data Scientist', verdict: 'Offered', difficulty: 'Medium', title: 'Microsoft Data Scientist - SQL & A/B Testing', summary: 'Heavy focus on ML fundamentals, probability, and stats. One round was purely on SQL. Case study on A/B testing was key.', comments: 18, upvotes: 189 },
+            { company: 'Netflix', role: 'Senior Software Engineer', verdict: 'Offered', difficulty: 'Hard', title: 'Netflix - Culture is Everything', summary: 'Unique process with deep dives into past projects. Culture fit is huge, be prepared to talk about your impact.', comments: 33, upvotes: 256 },
+            { company: 'Uber', role: 'Software Engineer', verdict: 'Rejected', difficulty: 'Medium', title: 'Uber - Rider-Driver Matching Algorithm', summary: 'The coding challenge was about designing an algorithm for rider-driver matching. Got stuck on the sharding strategy in system design.', comments: 21, upvotes: 78 },
+            { company: 'Salesforce', role: 'DevOps Engineer', verdict: 'Offered', difficulty: 'Medium', title: 'Salesforce DevOps - Hands-on Kubernetes', summary: 'Interviews covered Kubernetes, Terraform, and CI/CD pipelines. Had a live debugging session on a broken Jenkins pipeline.', comments: 9, upvotes: 112 },
+            { company: 'Adobe', role: 'Research Scientist', verdict: 'Awaiting', difficulty: 'Hard', title: 'Adobe Research - Presented my Thesis', summary: 'Deep dive into my publications. One round was a presentation of my PhD thesis. Coding was implementing algorithms from papers.', comments: 5, upvotes: 65 },
+            { company: 'Oracle', role: 'SDE-2', verdict: 'Rejected', difficulty: 'Medium', title: 'Oracle Cloud (OCI) - DP Problem', summary: 'Standard LeetCode style questions. Fumbled on a Dynamic Programming problem in the final round.', comments: 15, upvotes: 45 },
+            { company: 'Stripe', role: 'Frontend Engineer', verdict: 'Offered', difficulty: 'Hard', title: 'Stripe Frontend - Bug Squashing and API design', summary: 'Very practical. One round was fixing bugs in a React component. Another was designing a client-side API. High bar for code quality.', comments: 28, upvotes: 199 },
+            { company: 'Coinbase', role: 'ML Engineer', verdict: 'Offered', difficulty: 'Hard', title: 'Coinbase - Fraud Detection System Design', summary: 'System design on building a real-time fraud detection model. Also covered topics on blockchain and smart contracts at a high level.', comments: 14, upvotes: 175 },
+            { company: 'Databricks', role: 'Software Engineer', verdict: 'Rejected', difficulty: 'Hard', title: 'Databricks - Deep Systems Knowledge Required', summary: 'Questions on distributed systems, Spark architecture, and query optimization. Extremely deep technical interviews.', comments: 19, upvotes: 130 },
+            { company: 'Google', role: 'Data Scientist', verdict: 'Rejected', difficulty: 'Medium', title: 'Google DS - Stats and Experiment Design', summary: 'Focused on statistical concepts, hypothesis testing, and designing experiments. SQL questions were tricky.', comments: 30, upvotes: 120 },
+            { company: 'Amazon', role: 'SDE-2', verdict: 'Offered', difficulty: 'Medium', title: 'Amazon AWS SDE-2 Offer', summary: 'Again, Leadership Principles were key. System design was to design S3. Be ready for follow-up questions on consistency models.', comments: 40, upvotes: 280 },
+            { company: 'Microsoft', role: 'Software Engineer', verdict: 'Offered', difficulty: 'Easy', title: 'Easy pass at Microsoft for SDE', summary: 'Process was very smooth. Questions were LeetCode easy/medium. Standard behavioral questions. Felt very structured.', comments: 50, upvotes: 310 },
+            { company: 'Apple', role: 'Software Engineer', verdict: 'Awaiting', difficulty: 'Hard', title: 'Apple - Secretive and tough interviews', summary: 'Cannot disclose much due to NDA. Very practical, OS-level questions. High expectations on code quality and performance.', comments: 10, upvotes: 95 },
+            { company: 'Twitter (X)', role: 'Senior Software Engineer', verdict: 'Rejected', difficulty: 'Medium', title: 'Twitter - Backend API scaling', summary: 'Design a system to handle the "tweet" timeline. Focus on fan-out on write vs. fan-out on read. Culture was a bit chaotic.', comments: 22, upvotes: 60 },
+        ];
+        
+        // --- DOM ELEMENTS ---
+        const feedContainer = document.getElementById('experience-feed');
+        const companySearch = document.getElementById('companySearch');
+        const roleSearch = document.getElementById('roleSearch');
+        const keywordSearch = document.getElementById('keywordSearch');
+        const noResultsMessage = document.getElementById('no-results');
+        const addExperienceBtnHero = document.getElementById('addExperienceBtnHero');
+        const contributeBtn = document.getElementById('contributeBtn');
+        const experienceForm = document.getElementById('experienceForm');
+
+        // --- DYNAMIC RENDERING LOGIC ---
+        const difficultyColor = { 'Easy': 'text-green-400 border-green-400', 'Medium': 'text-yellow-400 border-yellow-400', 'Hard': 'text-red-400 border-red-400' };
+        const verdictIcon = { 'Offered': '<i class="fa-solid fa-circle-check text-green-400"></i>', 'Rejected': '<i class="fa-solid fa-circle-xmark text-red-400"></i>', 'Awaiting': '<i class="fa-solid fa-clock text-yellow-400"></i>', 'Offer Declined': '<i class="fa-solid fa-circle-xmark text-red-400"></i>' };
+
+        function renderExperiences(data) {
+            let content = `<div class="hidden md:grid grid-cols-12 gap-4 px-4 py-2 text-xs font-bold text-gray-400 uppercase"><div class="col-span-6">Title</div><div class="col-span-2 text-center">Verdict</div><div class="col-span-2 text-center">Difficulty</div><div class="col-span-2 text-center">Activity</div></div>`;
+            data.forEach(item => {
+                content += `
+                <div class="experience-card grid grid-cols-12 gap-4 items-center bg-[#141414] p-4 rounded-lg border border-transparent transition-all duration-300 cursor-pointer" 
+                    data-company="${item.company}" data-role="${item.role}" data-title="${item.title}" data-summary="${item.summary}"
+                    onclick="handleExperienceClick(this)">
+                    <div class="col-span-12 md:col-span-6 flex items-center space-x-4">
+                        <img src="https://logo.clearbit.com/${item.company.toLowerCase().replace(/\s*\(.*\)\s*/g, '').trim()}.com?size=40" alt="${item.company} logo" class="w-8 h-8 rounded-full bg-gray-700 object-contain" onerror="this.src='https://placehold.co/40x40/374151/FFFFFF?text=${item.company.charAt(0)}'">
+                        <div>
+                            <p class="font-bold text-white">${item.title}</p>
+                            <p class="text-xs text-gray-400">${item.company} • ${item.role}</p>
+                        </div>
+                    </div>
+                    <div class="col-span-4 md:col-span-2 text-center text-sm flex items-center justify-center gap-2">
+                         ${verdictIcon[item.verdict] || ''}<span class="hidden md:inline">${item.verdict}</span>
+                    </div>
+                    <div class="col-span-4 md:col-span-2 text-center">
+                        <span class="text-xs font-semibold px-2 py-1 border rounded-full ${difficultyColor[item.difficulty] || ''}">${item.difficulty}</span>
+                    </div>
+                    <div class="col-span-4 md:col-span-2 flex justify-center items-center space-x-4 text-xs text-gray-400">
+                        <span title="Comments"><i class="fa-solid fa-comments"></i> ${item.comments}</span>
+                        <span title="Upvotes"><i class="fa-solid fa-thumbs-up"></i> ${item.upvotes}</span>
+                    </div>
+                </div>`;
+            });
+            feedContainer.innerHTML = content;
+        }
+
+        // --- MODAL & GATING LOGIC ---
+        function openModal(modalId) { document.getElementById(modalId).classList.remove('hidden'); }
+        function closeModal(modalId) { document.getElementById(modalId).classList.add('hidden'); }
+        
+        function handleExperienceClick(element) {
+            if (userHasContributed) {
+                const title = element.dataset.title;
+                const summary = element.dataset.summary;
+                const company = element.dataset.company;
+                const role = element.dataset.role;
+
+                document.getElementById('modalTitle').innerText = title;
+                document.getElementById('modalBody').innerHTML = `
+                    <p class="text-blue-400 font-semibold">${company} • ${role}</p>
+                    <p>${summary}</p><br>
+                    <p><em>In a real application, the full, detailed interview experience including all rounds and questions would be loaded here from a database.</em></p>`;
+                openModal('detailModal');
+            } else {
+                openModal('contributionModal');
+            }
+        }
+
+        addExperienceBtnHero.addEventListener('click', () => openModal('addExperienceModal'));
+        contributeBtn.addEventListener('click', () => {
+            closeModal('contributionModal');
+            openModal('addExperienceModal');
+        });
+
+        // --- FILTERING LOGIC ---
+        function filterExperiences() {
+            const companyTerm = companySearch.value.toLowerCase();
+            const roleTerm = roleSearch.value.toLowerCase();
+            const keywordTerm = keywordSearch.value.toLowerCase();
+
+            const filteredData = experienceData.filter(item => 
+                item.company.toLowerCase().includes(companyTerm) && 
+                item.role.toLowerCase().includes(roleTerm) && 
+                (item.title.toLowerCase().includes(keywordTerm) || item.summary.toLowerCase().includes(keywordTerm))
+            );
+            renderExperiences(filteredData);
+            noResultsMessage.classList.toggle('hidden', filteredData.length > 0);
+        }
+
+        [companySearch, roleSearch, keywordSearch].forEach(input => input.addEventListener('input', filterExperiences));
+        
+        // --- FORM SUBMISSION ---
+        experienceForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const newExperience = {
+                company: document.getElementById('companyName').value,
+                role: document.getElementById('jobTitle').value,
+                verdict: document.getElementById('finalVerdict').value,
+                difficulty: document.getElementById('difficulty').value,
+                title: document.getElementById('experienceTitle').value,
+                summary: document.getElementById('experienceSummary').value,
+                comments: 0,
+                upvotes: 0,
+            };
+            experienceData.unshift(newExperience); // Add to the top of the list
+            userHasContributed = true;
+            // No toggle to check anymore, just set the state
+            closeModal('addExperienceModal');
+            filterExperiences(); // Re-render the list with the new item
+            experienceForm.reset();
+        });
+
+        // --- INITIAL RENDER ---
+        renderExperiences(experienceData);
+    </script>
+</body>
+</html>
